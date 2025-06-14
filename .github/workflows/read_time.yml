@@ -2,8 +2,8 @@ name: read time sync
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 */6 * * *"
+#  schedule:
+#    - cron: "0 */6 * * *"
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -15,9 +15,9 @@ jobs:
       NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
       NOTION_PAGE: ${{ secrets.NOTION_PAGE }}
       WEREAD_COOKIE: ${{ secrets.WEREAD_COOKIE }}
-      CC_URL: ${{ secrets.CC_URL }}
-      CC_ID: ${{ secrets.CC_ID }}
-      CC_PASSWORD: ${{ secrets.CC_PASSWORD }}
+ #     CC_URL: ${{ secrets.CC_URL }}
+  #    CC_ID: ${{ secrets.CC_ID }}
+   #   CC_PASSWORD: ${{ secrets.CC_PASSWORD }}
       HEATMAP_BLOCK_ID: ${{ secrets.HEATMAP_BLOCK_ID }}
       BOOK_DATABASE_NAME: ${{ vars.BOOK_DATABASE_NAME }}
       AUTHOR_DATABASE_NAME: ${{ vars.AUTHOR_DATABASE_NAME }}
